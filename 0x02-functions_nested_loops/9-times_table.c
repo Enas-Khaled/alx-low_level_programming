@@ -20,25 +20,25 @@ void times_table(void)
 
 			if (res > 9)
 			{
+				if (j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 				n1 = res / 10;
 				n2 = res % 10;
 				_putchar(n1 + '0');
 				_putchar(n2 + '0');
-				if (j != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
 			}
 			else
 			{
-				_putchar(res + '0');
-				if (j != 9)
+				if (j != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 				}
+				_putchar(res + '0');
 			}
 			j++;
 		}
