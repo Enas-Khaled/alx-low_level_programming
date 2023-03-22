@@ -26,6 +26,7 @@ void print_times_table(int n)
 					{
 						_putchar(',');
 						_putchar(' ');
+						_putchar(' ');
 					}
 					n1 = res / 10;
 					n2 = res % 10;
@@ -37,6 +38,7 @@ void print_times_table(int n)
 					if (j != 0)
 					{
 						_putchar(',');
+						_putchar(' ');
 						_putchar(' ');
 						_putchar(' ');
 					}
