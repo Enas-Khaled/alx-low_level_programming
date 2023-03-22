@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * natural - prints natural % 5 or % 3
+ * main - prints natural % 5 or % 3
  * Return: sum
  */
-int natural(void)
+int main(void)
 {
 	int i, sum = 0;
 
@@ -16,5 +16,5 @@ int natural(void)
 		}
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
