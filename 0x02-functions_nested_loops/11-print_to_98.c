@@ -17,7 +17,7 @@ void print_to_98(int n)
 				printf("%i, ", n);
 			else
 				printf("%i", n);
-			i++;
+			n++;
 		}
 	}
 	else
@@ -28,7 +28,7 @@ void print_to_98(int n)
 				printf("%i", n);
 			else
 				printf("%i, ", n);
-			i--;
+			n--;
 		}
 	}
 	_putchar('\n');
