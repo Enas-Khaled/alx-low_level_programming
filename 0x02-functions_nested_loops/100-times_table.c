@@ -10,7 +10,7 @@ void print_times_table(int n)
 	int i = 0, j, n1, n2, res;
 
 	if ((n > 15) || (n < 0))
-		_putchar('');
+		goto end;
 	else
 	{
 		while (i < n)
@@ -48,4 +48,5 @@ void print_times_table(int n)
 			i++;
 		}
 	}
+	end:
 }
