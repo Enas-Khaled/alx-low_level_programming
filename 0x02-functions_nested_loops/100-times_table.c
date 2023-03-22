@@ -13,10 +13,10 @@ void print_times_table(int n)
 		return;
 	else
 	{
-		while (i < n)
+		while (i <= n)
 		{
 			j = 0;
-			while (j < n)
+			while (j <= n)
 			{
 				res = i * j;
 
