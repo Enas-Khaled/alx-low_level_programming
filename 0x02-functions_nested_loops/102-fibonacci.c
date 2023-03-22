@@ -12,6 +12,8 @@ int main(void)
 	for (i = 2; i < 50; i++)
 	{
 		next = first + second;
+		if (next < 0)
+			continue;
 		printf("%d", next);
 		if (i < 49)
 		{
