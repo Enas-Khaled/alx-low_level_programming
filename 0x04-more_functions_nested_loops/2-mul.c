@@ -3,8 +3,8 @@
 
 /**
  * mul - adds two numbers
- * @num1: an integer
- * @num2: an integer
+ * @a: an integer
+ * @b: an integer
  * Return: mul
  */
 int mul(int a, int b)
