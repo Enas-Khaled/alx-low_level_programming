@@ -8,9 +8,10 @@ int main(void)
 {
 	int fib1 = 1;
 	int fib2 = 2;
+	int i;
 
 	printf("%d, %d, ", fib1, fib2);
-	for (int i = 0; i < 96; i++)
+	for (i = 0; i < 96; i++)
 	{
 		int fib_next = fib1 + fib2;
 		printf("%d, ", fib_next);
