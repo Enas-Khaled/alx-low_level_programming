@@ -8,7 +8,7 @@ int main(void)
 {
 	long int first = 1, second = 2, next, i;
 
-	printf("%ld, %dl, ", first, second);
+	printf("%ld, %ld, ", first, second);
 	for (i = 2; i < 50; i++)
 	{
 		next = first + second;
