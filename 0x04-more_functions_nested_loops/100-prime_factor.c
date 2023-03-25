@@ -5,9 +5,9 @@
  * @n: int
  * Return: 0 Or 1
  */
-int is_prime(long long int n)
+int is_prime(long int n)
 {
-	long long int i;
+	long int i;
 
 	if (n <= 0)
 		return (0);
@@ -24,8 +24,8 @@ int is_prime(long long int n)
  */
 int main(void)
 {
-	long long int n = 612852475143;
-	long long int i, largest_prime = 0;
+	long int n = 612852475143;
+	long int i, largest_prime = 0;
 
 	for (i = 2; i <= sqrt(n); i++)
 	{
@@ -37,6 +37,6 @@ int main(void)
 				largest_prime = n / i;
 		}
 	}
-	printf("%lld\n", largest_prime);
+	printf("%ld\n", largest_prime);
 	return (0);
 }
