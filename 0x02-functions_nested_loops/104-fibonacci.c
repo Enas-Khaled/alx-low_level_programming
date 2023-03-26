@@ -2,24 +2,26 @@
 #include "main.h"
 /**
  * main - entery point
- * Return: void
+ * Return: 0 success
  */
 int main(void)
 {
-	int fib1 = 1;
-	int fib2 = 2;
-	int i;
+	unsigned long int first = 1, second = 2, next, i;
 
-	printf("%d, %d, ", fib1, fib2);
-	for (i = 0; i < 96; i++)
+	printf("%lu, %lu, ", first, second);
+	for (i = 2; i < 98; i++)
 	{
-		int fib_next = fib1 + fib2;
-
-		printf("%d, ", fib_next);
-		fib1 = fib2;
-		fib2 = fib_next;
+		next = first + second;
+		if (next < 0)
+			continue;
+		printf("%lu", next);
+		if (i < 97)
+		{
+			printf(", ");
+		}
+		first = second;
+		second = next;
 	}
 	printf("\n");
 	return (0);
 }
-
