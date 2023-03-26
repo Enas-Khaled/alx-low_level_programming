@@ -12,8 +12,6 @@ int main(void)
 	for (i = 2; i < 98; i++)
 	{
 		next = first + second;
-		if (next < 0)
-			continue;
 		printf("%lu", next);
 		if (i < 97)
 		{
