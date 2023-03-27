@@ -7,17 +7,12 @@
  */
 void print_array(int *a, int n)
 {
-	int i;
-
-	for (i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (n == 0)
-			_putchar('\n');
-		else if (i == (n - 1))
-			printf("%d\n ", a[i]);
-		else
-			printf("%d, ", a[i]);
+		printf("%d", a[i]); // print current element
+
+		if (i != n - 1)
+			printf(", "); // print comma and space if not last element
 	}
-
+	printf("\n"); // print newline character
 }
-
