@@ -11,7 +11,7 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		if (i == 0)
+		if (n == 0)
 			_putchar('\n');
 		else if (i == (n - 1))
 			printf("%d\n ", a[i]);
