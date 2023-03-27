@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>OB
+#include <string.h>
 /**
  * puts_half(char *str)- void _puts(char *str);
  * @str: string
@@ -16,7 +16,7 @@ void puts_half(char *str)
 		len2 = (len - 1) / 2;
 
 	for (i = 0; str[i] != '\0'; i++)
-		if ((i >= len2)
+		if (i >= len2)
 			_putchar(str[i]);
 	_putchar('\n');
 }
