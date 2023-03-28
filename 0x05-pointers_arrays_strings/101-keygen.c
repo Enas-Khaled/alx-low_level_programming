@@ -7,22 +7,17 @@
  */
 int main(void)
 {
-    const char *const valid_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    int i;
-    char password[7];
+    int sum;
+  char c;
+
     srand(time(NULL));
-    
-/*    printf("Generating random passwords for 101-crackme...\n");*/
-    
-    for (i = 0; i < 10; i++) {
-        int j;
-        for (j = 0; j < 6; j++) {
-            int r = rand() % 62;
-            password[j] = valid_chars[r];
-        }
-        password[6] = '\0';
-       */ printf("Password %d: %s\n", i+1, password);*/
+    while (sum <2645)
+    {
+        c = rand() % 128;
+        sum += c;
+        putchar(c);
+        
     }
-    printf("Tada! Congrats\n");
-    return 0;
+    putchar(2772- sum);
+    return (0);
 }
