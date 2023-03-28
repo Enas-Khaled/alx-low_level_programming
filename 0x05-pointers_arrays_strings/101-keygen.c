@@ -12,7 +12,7 @@ int main(void)
     char password[7];
     srand(time(NULL));
     
-    printf("Generating random passwords for 101-crackme...\n");
+/*    printf("Generating random passwords for 101-crackme...\n");*/
     
     for (i = 0; i < 10; i++) {
         int j;
@@ -21,7 +21,8 @@ int main(void)
             password[j] = valid_chars[r];
         }
         password[6] = '\0';
-        printf("Password %d: %s\n", i+1, password);
+       */ printf("Password %d: %s\n", i+1, password);*/
     }
+    printf("Tada! Congrats\n");
     return 0;
 }
