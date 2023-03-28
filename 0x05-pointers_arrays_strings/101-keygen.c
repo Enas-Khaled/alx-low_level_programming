@@ -7,11 +7,10 @@
  */
 int main(void)
 {
+    const char *const valid_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     int i;
     char password[7];
     srand(time(NULL));
-    const char *const valid_chars = "abcdefghijklmnopqrstuvw\
-xyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     
     printf("Generating random passwords for 101-crackme...\n");
     
@@ -26,4 +25,3 @@ xyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     }
     return 0;
 }
-
