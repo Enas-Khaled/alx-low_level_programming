@@ -4,7 +4,7 @@
  * @s: char
  * Return: integer
  */
-int _atoi(char *)
+int _atoi(char *s)
 {
 	int sign = 1;
 	unsigned int num = 0;
