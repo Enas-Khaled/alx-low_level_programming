@@ -22,7 +22,7 @@ void print_times_table(int n)
 				str[len++] = num % 10 + '0';
 				num /= 10;
 			} while (num > 0);
-			for (k = 0; k < len - 1; k--)
+			for (k = len - 1; k >= 0; k--)
 				_putchar(str[k]);
 			if (j < n)
 				_putchar(',');
