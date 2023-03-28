@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+
 /**
  * *_strcpy - copy
  * @dest: dest
