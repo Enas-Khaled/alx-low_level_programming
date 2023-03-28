@@ -11,9 +11,9 @@ int _atoi(char *s)
 	int seen_digit = 0;
 
 	while (*s != '\0')
-       	{
+	{
 		if (*s == '-' && !seen_digit)
-			sign*= -1;
+			sign *= -1;
 		else if (*s >= '0' && *s <= '9')
 		{
 			seen_digit = 1;
