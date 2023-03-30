@@ -4,15 +4,13 @@
  * @str: string
  * Return: char
  */
-char* string_toupper(char* str)
+char *string_toupper(char *str)
 {
-	char* p = str;
-	
-	while (*p)
+	while (*str != '\0')
 	{
-		if (*p >= 'a' && *p <= 'z')
-			*p = *p - ('a' - 'A');
-		p++;
+		if (*str >= 'a' && *str <= 'z')
+			*str = *str - 32;
+		str++;
 	}
-	return str;
+	return (str);
 }
