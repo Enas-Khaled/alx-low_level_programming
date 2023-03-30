@@ -6,13 +6,20 @@
  */
 char *cap_string(char *str)
 {
-        char *p = str;
+	char* p = str;
+    int capitalize_next = 1;
 
-        while (*p)
-        {
-                if (*p >= 'a' && *p <= 'z')
-                        *p = *p - ('a' - 'A');
-                p++;
+    while (*p) {
+        if (isspace(*p) || ispunct(*p)) {
+            capitalize_next = 1;
         }
-        return (str);
+        else {
+            if (capitalize_next) {
+                *p = toupper(*p);
+                capitalize_next = 0;
+            }
+        }
+        p++;
+    }
+    return str;
 }
