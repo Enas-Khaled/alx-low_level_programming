@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * *_strncpy - copy(char *dest, char *src, int n)
+ * _strncpy - copy(char *dest, char *src, int n)
  * @dest: destination
  * @src:source
  * @n: size
+ * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
