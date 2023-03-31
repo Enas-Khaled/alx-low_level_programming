@@ -7,20 +7,28 @@
  */
 char *cap_string(char *str)
 {
-	char* p = str;
-    int capitalize_next = 1;
+	char sep[] = {' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}'};
+	int i, j;
 
-    while (*p) {
-        if (isspace(*p) || ispunct(*p)) {
-            capitalize_next = 1;
-        }
-        else {
-            if (capitalize_next) {
-                *p = toupper(*p);
-                capitalize_next = 0;
-            }
-        }
-        p++;
-    }
-    return str;
+	i = 0;
+
+	while (str[i] != '\0')
+	{
+		if (str[0] <= 'z' && str[0] >= 'a')
+		str[0] -= 32;
+		j = 0;
+
+		while (sep[j] != '\0')
+		{
+			if ((sep[j] == str[i]) && str[i + 1] >= 'a' && str[i + 1] <= 'z')
+			{
+				str[i + 1] -= 32;
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (str);
 }
