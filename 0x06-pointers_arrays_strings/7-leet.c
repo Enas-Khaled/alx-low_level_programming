@@ -6,31 +6,19 @@
  */
 char *leet(char *str)
 {
-	char *p = str;
+	char a[] = "AaEeOoTtLl";
+	char b[] = "4433007711";
+	int i, j;
 
-	while (*p)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (*p == 'a' || *p == 'A')
+		for (j = 0; j < 10; j++)
 		{
-			*p = '4';
+			if (str[i] == a[j])
+			{
+				str[i] = b[j];
+			}
 		}
-		else if (*p == 'e' || *p == 'E')
-		{
-			*p = '3';
-		}
-		else if (*p == 'o' || *p == 'O')
-		{
-			*p = '0';
-		}
-		else if (*p == 't' || *p == 'T')
-		{
-			*p = '7';
-		}
-		else if (*p == 'l' || *p == 'L')
-		{
-			*p = '1';
-		}
-		p++;
 	}
 	return (str);
 }
