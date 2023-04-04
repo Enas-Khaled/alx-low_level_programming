@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * *_strchr - searsh of c in s(char *s, char c)
  * @s: string
@@ -8,10 +7,11 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-	int len = strlen(s);
+	int i, j, len = 0;
 
-	for (i = 0; i >= '\0'; i++)
+	for (j = 0; s[j] != '\0'; j++)
+		len += 1;
+	for (i = 0; i <= len; i++)
 	{
 		if (s[i] == c)
 			return (s + i);
