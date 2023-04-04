@@ -4,15 +4,14 @@
  * @s: string
  * @b: element
  * @n: size
+ * Return: string
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned char *p = s;
+	unsigned int i;
 
-	while (n--)
-	{
-		*p++ = (unsigned char)b;
-	}
+	for (i = 0; i < n; i++)
+		s[i] = b;
 
 	return (s);
 }
