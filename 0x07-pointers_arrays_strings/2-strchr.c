@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * *_strchr - searsh of c in s(char *s, char c)
  * @s: string
