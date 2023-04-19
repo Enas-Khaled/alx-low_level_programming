@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "dog.h"
+#include <stdlib>
 /**
  * init_dog - (struct dog *d, char *name, float age, char *owner)
  * @d: pointer
