@@ -3,9 +3,9 @@
  * main - entery point
  * @argc: nums of arg
  * @argv: vector of arg
- * Return: 0 
+ * Return: 0
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int (*op_fun)(int, int), a, b;
 
@@ -22,6 +22,6 @@ int main (int argc, char **argv)
 	if (!b && (argv[2][0] == '/' || argv[2][0] == '%'))
 		printf("Error\n"), exit(100);
 
-	printf("%d\n",op_fun(a, b));
+	printf("%d\n", op_fun(a, b));
 	return (0);
 }
