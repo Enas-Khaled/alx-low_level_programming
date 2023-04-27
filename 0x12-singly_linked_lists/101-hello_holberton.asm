@@ -9,4 +9,4 @@ main:
 	mov eax, 0
 	ret
 section		.data
-	msg db 'Hello, Holberton,', 0xa, 0
+	msg db 'Hello, Holberton', 0xa, 0
