@@ -6,21 +6,22 @@
  */
 char *_strdup(char *str)
 {
-	int size = 0, i = 0;
+	int size = 0, i;
+	char *ptr;
 
 	if (str == NULL)
 		return (NULL); 
 	while (str[size] != '\0')
 		size++;
 
-	char *ptr = malloc(size * sizeof(*str) + 1);
+	*ptr = malloc(size * sizeof(*str) + 1);
 
 	if (ptr == 0)
 		return (NULL);
 	else
 	{
-		while (str[size] != '\0')
-			ptr[size] = str[size];
+		for (i = 0; i < size; i++)
+			ptr[i] = str[i];
 	}
 	return (ptr);
 }
