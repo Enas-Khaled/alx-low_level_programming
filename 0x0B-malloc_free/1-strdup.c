@@ -6,18 +6,21 @@
  */
 char *_strdup(char *str)
 {
-	int size = 0;
+	int size = 0, i = 0;
 
-	while (str)
+	if (str == NULL)
+		return (NULL); 
+	while (str[size] != '\0')
 		size++;
 
-	char *ptr = malloc(size);
+	char *ptr = malloc(size * sizeof(*str) + 1);
 
-	if (str == NULL || ptr == 0)
+	if (ptr == 0)
 		return (NULL);
-
-	while (str)
-		ptr[size] = str[size];
-
+	else
+	{
+		while (str[size] != '\0')
+			ptr[size] = str[size];
+	}
 	return (ptr);
 }
