@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * strtow - splits a string into words
  * @str: the string to split
