@@ -22,7 +22,7 @@ int _strlen(char *s)
  */
 size_t print_list(const list_t *h)
 {
-	size_t L;
+	size_t L = 0;
 
 	while (h)
 	{
