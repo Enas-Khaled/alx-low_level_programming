@@ -3,7 +3,6 @@
 /**
  * strtow - splits a string into words
  * @str: the string to split
- *
  * Return: a pointer to an array of strings (words), or NULL if it fails
  */
 char **strtow(char *str)
@@ -13,18 +12,15 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
 	len = strlen(str);
 	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			words++;
 	}
-
 	arr = malloc((words + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
-
 	k = 0;
 	for (i = 0; i < len && k < words; i++)
 	{
@@ -49,7 +45,6 @@ char **strtow(char *str)
 		}
 	}
 	arr[k] = NULL;
-
 	return (arr);
 }
 
