@@ -1,37 +1,34 @@
 #include "main.h"
+#include <strring.h>
 /**
- * str_concat - (char *s1, char *s2)
- * @s1: first str
- * @s2: second str
- * Return: char
+ * str_concat - concatenate two strings
+ * @s1: the first string
+ * @s2: the second string
+ *
+ * Return: pointer to newly allocated memory containing the concatenated string,
+ *         or NULL if memory allocation fails or if s1 and s2 are both NULL.
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size1 = 0, size2 = 0, i;
-	char *ptr;
+    char *result;
+    int len1 = 0, len2 = 0, i;
 
-	if (s1 == NULL)
-		s1 = '\0';
-	if (s2 == NULL)
-		s2 = '\0';
+    if (s1 != NULL)
+        len1 = strlen(s1);
+    if (s2 != NULL)
+        len2 = strlen(s2);
 
-	while (s1[size1] != '\0')
-		size1++;
-	while (s2[size2] != '\0')
-		size2++;
+    result = malloc(len1 + len2 + 1);
+    if (result == NULL)
+        return NULL;
 
-	ptr = malloc((size1 + size2) * sizeof(char) + 1);
+    for (i = 0; i < len1; i++)
+        result[i] = s1[i];
+    for (i = 0; i < len2; i++)
+        result[len1 + i] = s2[i];
 
-	if (ptr == 0)
-		return (0);
+    result[len1 + len2] = '\0';
 
-	for (i = 0; i <= (size1 + size2); i++)
-	{
-		if (i < size1)
-			ptr[i] = s1[i];
-		else
-			ptr[i] = s2[i - size1];
-	}
-	ptr[i] = '\0';
-	return (ptr);
+    return result;
 }
+
