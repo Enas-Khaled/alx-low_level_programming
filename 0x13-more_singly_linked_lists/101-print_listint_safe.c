@@ -13,9 +13,9 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (head != NULL)
 	{
-		printf("%d\n", head->next);
+		printf("%d\n", head->n);
 		head = head->next;
 		count++;
 	}
-	return (counts);
+	return (count);
 }
