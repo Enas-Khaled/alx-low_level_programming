@@ -1,7 +1,7 @@
 #include "main.h"
 
 /* Function prototypes */
-int validate_args(int argc, char **argv);
+int validate_args(int argc);
 int open_file(const char *filename, int flags, mode_t mode);
 int copy_file(int fd_from, int fd_to);
 void close_file(int fd);
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 {
 	int fd_from, fd_to;
 
-	validate_args(argc, argv);
+	validate_args(argc);
 
 	fd_from = open_file(argv[1], O_RDONLY, 0);
 	fd_to = open_file(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -32,10 +32,9 @@ int main(int argc, char **argv)
 /**
  * validate_args - validates the command line arguments
  * @argc: the number of arguments passed to the program
- * @argv: an array of pointers to the arguments
  * Return: 0 on success, or exits with an error code on failure
  */
-int validate_args(int argc, char **argv)
+int validate_args(int argc)
 {
 	if (argc != 3)
 	{
