@@ -7,8 +7,8 @@
 #include <fcntl.h>
 #include <errno.h>
 #define BUFSIZE 1024
-
-int validate_args(int arg);
+void validate(int argc);
+void f_close(int f);
 int open_file(const char *filename, int flags, mode_t mode);
 int copy_file(int fd_from, int fd_to);
 void close_file(int fd);

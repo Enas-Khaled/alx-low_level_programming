@@ -1,5 +1,34 @@
 #include "main.h"
 /**
+ * f_close - close file
+ * @f: file
+ * Return: void
+ */
+void f_close(int f)
+{
+	int fd_close;
+
+	fd_close = close(f);
+	if (fd_close == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f);
+		exit(100);
+	}
+}
+/**
+ * validate - validate argc
+ * @argc: no. of argum
+ * Return: void
+ */
+void validate(int argc)
+{
+	if (argc != 3)
+	{
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
+	}
+}
+/**
  * main - copies the content of a file to another file
  * @argc: the number of arguments passed to the program
  * @argv: an array of pointers to the arguments *
@@ -7,14 +36,10 @@
  */
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to, rd, wr, close_fd;
+	int fd_from, fd_to, rd, wr;
 	char buf[BUFSIZE];
 
-	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+	validate(argc);
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
@@ -46,18 +71,7 @@ int main(int argc, char **argv)
 		close(fd_to);
 		exit(98);
 	}
-	close_fd = close(fd_from);
-
-	if (close_fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
-		exit(100);
-	}
-	close_fd = close(fd_to);
-	if (close_fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
-		exit(100);
-	}
+	f_close(fd_from);
+	f_close(fd_to);
 	return (0);
 }
