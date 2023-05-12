@@ -6,7 +6,19 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <elf.h>
 #define BUFSIZE 1024
+void get_magic(Elf64_Ehdr *ehdr, char *fname, int fd);
+void get_class(Elf64_Ehdr *ehdr);
+void get_class(Elf64_Ehdr *ehdr);
+void get_velf(Elf64_Ehdr *ehdr);
+void get_osabi(Elf64_Ehdr *ehdr);
+void get_vabi(Elf64_Ehdr *ehdr);
+void get_type(Elf64_Ehdr *ehdr);
+void get_entry(Elf64_Ehdr *ehdr);
 void validate(int argc);
 void f_close(int f);
 int open_file(const char *filename, int flags, mode_t mode);
