@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_dlistint(dlistint_t *head)
+ * free_dlistint - (dlistint_t *head)
  * @head: ptr to head
  * Return: void
  */
