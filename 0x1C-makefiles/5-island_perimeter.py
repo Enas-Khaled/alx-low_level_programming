@@ -1,4 +1,4 @@
-#!/bin/usr/env python3
+#!/usr/bin/python3
 def island_perimeter(grid):
     I = len(grid)
     J = len (grid[0])
